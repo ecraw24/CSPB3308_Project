@@ -18,6 +18,49 @@ Notes
 Post-conditions
 #############
 
+############# 
+Author: Michael Kim
+
+Use case name: 
+
+	Verify output is correct
+
+Description: 
+
+	Test the function (currently called get_categories()) that should return a list of all categories in
+	the database
+
+Pre-conditions: 
+
+	None
+
+Test Steps
+
+	1. Run the get_categories() function, passing the name of the database as string
+
+Expected Result
+
+	Function returns a list with the names of all the available categories
+
+Actual Result
+
+	N/A due to no available database as of yet
+
+Status (Pass/Fail)
+
+	Fail
+
+Notes
+
+	Currently no database to test the function on
+
+Post-conditions
+
+	N/A
+
+#############
+
+
 #############
 Author: Emma Crawford
 
