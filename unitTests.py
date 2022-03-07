@@ -55,6 +55,7 @@ class MySkillsPage(unittest.TestCase):
 		self.dbname = "AmIAverageTest"
 		self.db = sqlite3.connect(self.dbname)
 		self.c = self.db.cursor()
+		print("Testing Skill List Populate")
 		skill_list = []
 		for row in self.c.execute("SELECT skillname FROM skills CASE WHEN score IS NOT NULL")
 			skill_list.append(row[0])
