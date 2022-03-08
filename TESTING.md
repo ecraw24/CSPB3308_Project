@@ -109,45 +109,45 @@ Author: Kevin Vick
 
 Use case name:
 
-Verify percentile calculations and context tools
+	Verify percentile calculations and context tools
 
 Description:
 
-Test SQL query for returning output and assess whether the results is binned into
-the appropriate category of summary prose.
+	Test SQL query for returning output and assess whether the results is binned into
+	the appropriate category of summary prose.
 
 Pre-conditions:
 
-DB is properly populated.
+	DB is properly populated.
 
 Test Steps
 
-1. Accept input from previous page 
-2. Connect to the DB
-2. Query DB for statistical context of input
-3. Compare own relative score to query result
+	1. Accept input from previous page 
+	2. Connect to the DB
+	3. Query DB for statistical context of input
+	4. Compare own relative score to query result
 
 Expected Result
 
-Percentile output should map to a qualitative interpretation and visualization
+	Percentile output should map to a qualitative interpretation and visualization
 
 Actual Result
 
-Pending workflow
+	Pending workflow
 
 Status (Pass/Fail)
 
-Fail
+	Fail
 
 Notes
 
-Will reset prose category assertions from edge cases to ranges for better 
-test coverage. 
+	Will reset prose category assertions from edge cases to ranges for better 
+	test coverage. 
 
 Post-conditions
 
-User is presented with a simple prose summary of relative performance and a 
-dynamic graph of standing based on a normal distribution.
+	User is presented with a simple prose summary of relative performance and a 
+	dynamic graph of standing based on a normal distribution.
 
 #############
 
