@@ -1,6 +1,6 @@
-## Project Title: Am I Average?
+# Project Title: Am I Average?
 
-# Team Members: Emma Crawford, Michael Kim, Jeffrey Mason, Kevin Vick
+## Team Members: Emma Crawford, Michael Kim, Jeffrey Mason, Kevin Vick
 
 ############# 
 Use case name
