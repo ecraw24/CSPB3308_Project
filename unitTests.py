@@ -41,7 +41,53 @@ class HomePageTesting(unittest.TestCase):
 		for name in get_categories(self.dbname):
 			assertEqual(name, cats[i][0], "Error:\nExpected: {}\nActual: {}".format(cats[i][0], name))
 
+class ResultsPage(unittest.TestCase):
+#Testing subclass specific to the presentation of results. Page only reads from DB and calulates results dynamically, as commits to DBwould require updating percentiles for the whole category upon eachinsert..
 
+        #connects to the database
+        def setup(self):
+            self.dbname = "AmIAverage"
+            self.db = sqlite3.connect(self.dbname)
+            self.c = self.db.cursor()
+
+        #no need to commit any changes to it
+        def teardown(self):
+            self.db.close()
+
+        #unit test for test_calc_percentile() function, uses native SQL
+        def test_calc_percentile(self, testfile):
+            cats = get_categories(testfile)
+            for data in cats:
+                assertEqual(self.c.execute("SELECT (category), PERECENT_RANK() OVER (ORDER BY (category)) AS Percent_Rank FROM Categories"), data[3])
+
+
+        #unit test for interpretation of interpret_percentile() function, which outputs a normalized percentile
+        def test_interpret_percentile(self):
+            self.assertEqual("EXACTLY", interpret_percentile(49))
+            self.assertEqual("EXACTLY", interpret_percentile(50))
+            self.assertEqual("EXACTLLY", interpret_percentile(51))
+
+            self.assertEqual("ALMOST", interpret_percentile(52))
+            self.asssertEqual("ALMOST", interpret_percenile(55))
+            self.assertEqual("ALMOST", interpret_percentile(48))
+            self.assertEqual("ALMOST", interpret_percentile(45))
+
+            self.assertEqual("SORT OF", interpret_percentile(44))
+            self.assertEqual("SORT OF", interpret_percentile(34))
+            self.assertEqual("SORT OF", interpret_percentile(56))
+            self.assertEqual("SORT OF", interpret_percentile(66))
+
+            self.assertEqual("NOT REALLY", interpret_percentile(33)
+            self.assertEqual("NOT REALLY", interpret_percentile(3))
+            self.assertEqual("NOT REALLY", interpret_percentile(67)
+            self.assertEqual("NOT REALLY", interpret_percentile(97)
+
+            self.assertEqual("ABSOLUTELY NOT", interpret_percentile(2))
+            self.assertEqual("ABSOLUTELY NOT", interpret_percentile(0))
+            self.assertEqual("ABSOLUTELY NOT", interpret_percentile(98))
+            self.assertEqual("ABSOLUTELY NOT", interpret_percentile(100))
+			
+			
 class MySkillsPage(unittest.TestCase):
 	@classmethod
 	def setupclass(cls):
