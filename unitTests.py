@@ -78,11 +78,11 @@ class MySkillsPage(unittest.TestCase):
 			skill_list.append(row[0])
 		display_list = [0]*4
 		curr_skill = 0
-		display_list.filldisplay(skill_list, curr_skill)
-		self.assertEqual(skill_list[0:4], display_list, "Initial Display list incorrectly populated")
-		display_list.moredisplay(skill_list, curr_skill)
+		display_list.filldisplay(skill_list, curr_skill, display_list)
+		self.assertEqual(skill_list[0:4], display_list , "Initial Display list incorrectly populated")
+		display_list.filldisplay(skill_list, curr_skill, display_list)
 		self.assertEqual(skill_list[4:8], display_list, "Display list incorrectly refilled")
-		display_list.moredisplay(skill_list, curr_skill)
+		display_list.filldisplay(skill_list, curr_skill, display_list)
 		self.assertEqual(skill_list[8:11], display_list[0:3], "Display list incorrectly refilled #2")
 
 

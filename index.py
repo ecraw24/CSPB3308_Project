@@ -39,3 +39,26 @@ def verifyInput(resultInput):
         print("Input accepted.")
 
 
+### Populate the display list
+### this needs alotta work
+def filldisplay(skill_list, curr_skill, display_list):
+	if(display_list[0] == 0):
+		i = 0
+		while skill_list[curr_skill] != skill_list[-3] and i < 4:
+			display_list[i] = skill_list[curr_skill]
+			i+=1
+			curr_skill+=1
+	else:
+		while skill_list[curr_skill] != skill_list[-3]:
+			display_list[0] = display_list[1]
+			display_list[1] = display_list[2]
+			display_list[2] = display_list[3]
+			display_list[3] = skill_list[curr_skill]
+			curr_skill+=1
+		if skill_list[curr_skill] == skill_list[-3]:
+			curr_skill = 0
+			display_list[0] = skill_list[-1]
+			display_list[1] = skill_list[2]
+			display_list[2] = skill_list[3]
+
+
