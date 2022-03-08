@@ -103,3 +103,53 @@ Post-conditions
 	n/a
 
 #############
+
+
+#############
+Author: Jeffrey Mason
+
+Use case name
+
+	Verify that display list is being correctly populated and updated
+
+Description
+
+	Display list should correctly fill with entries from the skill_list
+    When we have displayed all entries we cycle to the beginning
+
+Pre-conditions
+
+	skill_list needs to be correctly filled with information
+    
+
+Test Steps
+
+	1. Declare a blank display list
+    2. Fill the display list with information
+    3. Test the result is correctly populated
+    4. Refresh the display list with more information
+    5. Test the result is correctly refreshed
+    6. Refresh the display list and exhaust it
+    7. Test we go back to the start of the elist
+
+Expected Result
+
+    Display list should fill correctly with information
+
+Actual Result
+
+	... Not yet observed
+
+Status (Pass/Fail)
+
+	Fail
+
+Notes
+
+	Failure was expected no test database function isnt finished
+
+Post-conditions
+
+	n/a
+
+#############
