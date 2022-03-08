@@ -3,26 +3,6 @@
 ## Team Members: Emma Crawford, Michael Kim, Jeffrey Mason, Kevin Vick
 
 ############# 
-Use case name
-
-Description
-
-Pre-conditions
-
-Test Steps
-
-Expected Result
-
-Actual Result
-
-Status (Pass/Fail)
-
-Notes
-
-Post-conditions
-#############
-
-############# 
 Author: Michael Kim
 
 Use case name: 
