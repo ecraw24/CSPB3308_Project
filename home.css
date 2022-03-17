@@ -1,0 +1,39 @@
+body {
+	background-color: dark blue;
+}
+#FeaturedCategories {
+	border: 1px solid black;
+	float: left;
+	width: 15%;
+	background-color: teal;
+}
+#FeaturedCategories div {
+	padding: 5px;
+}
+#ListHeader {
+	background-color: orange;
+}
+#ListItem {
+	background-color: yellow;
+}
+#TopText {
+	color: white;
+	margin-top: 3%;
+}
+#MainText {
+	color: orange;
+	margin-top: 30%;
+}
+#DescText {
+	color: white;
+	margin-top: 65%;
+	clear: both;
+}
+#LoginButton {
+	background-color: yellow;
+	float: right;
+}
+#SuggestCategory {
+	float: right;
+	margin-top: 65%;
+}
